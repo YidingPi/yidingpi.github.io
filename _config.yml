@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Alex(Yiding) Pi / Site Title"
+title                    : "Alex(Yiding) Pi"
 title_separator          : "-"
 name                     : &name "Alex(Yiding) Pi"
 description              : &description "personal description"
@@ -23,7 +23,7 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Alex(Yiding) Pi"
-  pronouns         : # example: "she/her"  
+  pronouns         : "He/him/his"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Quebec, Canada"
   employer         : "McGill University"
