@@ -1661,38 +1661,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="site-nav__width">
 
     <a class="site-nav__logo-link" href="https://web.mit.edu/">
-     <!-- alex-pi-logo.svg -->
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="980" height="200"
-     viewBox="0 0 980 200" role="img"
-     aria-labelledby="logoTitle logoDesc">
-  <title id="logoTitle">Alex Pi Logo</title>
-  <desc id="logoDesc">Logo derived from MIT mark with the name Alex Pi to the right.</desc>
+<svg class="mit-logo" xmlns="http://www.w3.org/2000/svg"
+     width="867.217" height="200" viewBox="0 0 867.217 200" aria-label="Alex Pi logo">
+  <!-- 继承 MIT 模板里的主色；也可以在全局 CSS 里重写 .logo-color--primary -->
+  <style>
+    .logo-color--primary { fill:#A31F34; }          /* MIT 深枣红 */
+    .logo-font          { font-family:"Helvetica Neue",
+                                           Helvetica,Arial,sans-serif;
+                           font-weight:700;
+                           letter-spacing:8px; }     /* 粗体、等距感 */
+  </style>
 
-  <!-- ******** 颜色定义 ******** -->
-  <defs>
-    <!-- MIT 深红 #a31f34  -->
-    <style>
-      .logo-primary { fill:#a31f34; }
-      .logo-text    { font: 120px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-                      font-weight:700; fill:#111; }
-    </style>
-  </defs>
-
-  <!-- ******** MIT 竖条（原始路径已裁剪简化，只保留最经典的 M‑I‑T 三竖条） ******** -->
-  <g transform="translate(0,0) scale(0.42)" class="logo-primary">
-    <!-- 左边 M 的第一竖条 -->
-    <rect   x="0"   y="0" width="90"  height="480"/>
-    <!-- 中间 I -->
-    <rect   x="150" y="120" width="90" height="360"/>
-    <!-- 右侧 T -->
-    <rect   x="300" y="0" width="90"  height="480"/>
-  </g>
-
-  <!-- ******** Alex Pi 文本 ******** -->
-  <!-- 调整 x 以便文字与图形有 24 px 间距；y 基线对齐中轴 -->
-  <text x="225" y="150" class="logo-text">Alex Pi</text>
+  <!-- 基线大约在 y=155，确保文字在 200px 高度内整体居中 -->
+  <text x="0" y="155" font-size="160"
+        class="logo-color--primary logo-font">
+    ALEX&nbsp;PI
+  </text>
 </svg>
+
 
       <h1 class="visually-hidden">Massachusetts Institute of Technology</h1>
     </a>
