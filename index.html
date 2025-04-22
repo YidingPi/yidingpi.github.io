@@ -1789,20 +1789,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     placeholder.style.opacity    = 0;
 
     // 打字机函数
+let typer;  // 把定时器句柄提升到外层
+
 function typeText(text, cb) {
+  // —— 先清掉上一轮的定时器，避免并行
+  if (typer) clearInterval(typer);
+
   let i = 0;
+  // —— 清空容器里的旧文字
   placeholder.textContent = '';
   placeholder.style.opacity = 1;
 
-  function typer() {
+  typer = setInterval(() => {
     if (i < text.length) {
       placeholder.textContent += text.charAt(i++);
-      setTimeout(typer, typeSpeed);
     } else {
+      clearInterval(typer);
+      typer = null;
       cb && cb();
     }
-  }
-  typer();
+  }, typeSpeed);
 }
 
 
