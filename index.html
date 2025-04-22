@@ -1793,16 +1793,18 @@ function typeText(text, cb) {
   let i = 0;
   placeholder.textContent = '';
   placeholder.style.opacity = 1;
-  const typer = setInterval(() => {
+
+  function typer() {
     if (i < text.length) {
-      // 只在 i < length 时追加字符
-      placeholder.textContent += text[i++];
+      placeholder.textContent += text.charAt(i++);
+      setTimeout(typer, typeSpeed);
     } else {
-      clearInterval(typer);
       cb && cb();
     }
-  }, typeSpeed);
+  }
+  typer();
 }
+
 
 
     // 切到下一条提示
